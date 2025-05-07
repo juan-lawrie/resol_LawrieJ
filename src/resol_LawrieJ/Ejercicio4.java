@@ -3,8 +3,7 @@ package resol_LawrieJ;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    public static void ejercicio4() {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         System.out.print("Ingrese una palabra: ");
         String palabra = scanner.nextLine().toLowerCase();
         int contador = 0;
@@ -14,11 +13,6 @@ public class Ejercicio4 {
             }
         }
         System.out.println("La palabra contiene " + contador + " vocal(es).");
-        scanner.close();
-    }
-
-    public static void main(String[] args) {
-        ejercicio4();
     }
 }
    

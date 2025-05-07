@@ -1,23 +1,21 @@
 package resol_LawrieJ;
 
+import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class Ejercicio12 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         Integer[] numeros = new Integer[5];
-
         for (int i = 0; i < 5; i++) {
             while (true) {
                 System.out.print("Ingrese número " + (i + 1) + ": ");
-                if (sc.hasNextInt()) {
-                    numeros[i] = sc.nextInt();
+                if (scanner.hasNextInt()) {
+                    numeros[i] = scanner.nextInt();
                     break;
                 } else {
                     System.out.println("No se puede ingresar decimales. Por favor, ingrese un número entero.");
-                    sc.next(); // Clear invalid input
+                    scanner.next(); // Limpiar entrada inválida
                 }
             }
         }
@@ -27,10 +25,6 @@ public class Ejercicio12 {
         for (int num : numeros) {
             System.out.print(num + " ");
         }
-        sc.close();
+        System.out.println();
     }
 }
-
-//Cuando se ingrese un numero con coma mostrar un mensaje diciendo: "que no se puede ingresar decimales y que por favor ingrese un numero entero" y volver a pedir el numero.
-
-

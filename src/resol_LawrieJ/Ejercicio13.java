@@ -1,7 +1,9 @@
 package resol_LawrieJ;
 
+import java.util.Scanner;
+
 public class Ejercicio13 {
-    public static void main(String[] args) {
+    public static void ejecutar(Scanner scanner) {
         String[] nombres = {"Ana", "Luis", "Carlos"};
         double[][] notas = {
             {7.5, 8.0, 9.0},

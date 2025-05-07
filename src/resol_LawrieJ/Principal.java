@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Instancia única de Scanner
         int opcion;
 
         do {
@@ -14,50 +14,57 @@ public class Principal {
             }
             System.out.println("0. Salir");
             System.out.print("Seleccione una opción: ");
+            
+            // Validar entrada del usuario
+            while (!scanner.hasNextInt()) {
+                System.out.println("Por favor, ingrese un número válido.");
+                scanner.next(); // Limpiar entrada inválida
+            }
             opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer después de leer el número
 
             switch (opcion) {
                 case 1:
-                    ejercicio1();
+                    Ejercicio1.ejecutar(scanner);
                     break;
                 case 2:
-                    ejercicio2();
+                    Ejercicio2.ejecutar(scanner);
                     break;
                 case 3:
-                    ejercicio3();
+                    Ejercicio3.ejecutar(scanner);
                     break;
                 case 4:
-                    ejercicio4();
+                    Ejercicio4.ejecutar(scanner);
                     break;
                 case 5:
-                    ejercicio5();
+                    Ejercicio5.ejecutar(scanner);
                     break;
                 case 6:
-                    ejercicio6();
+                    Ejercicio6.ejecutar(scanner);
                     break;
                 case 7:
-                    ejercicio7();
+                    Ejercicio7.ejecutar(scanner);
                     break;
                 case 8:
-                    ejercicio8();
+                    Ejercicio8.ejecutar(scanner);
                     break;
                 case 9:
-                    ejercicio9();
+                    Ejercicio9.ejecutar(scanner);
                     break;
                 case 10:
-                    ejercicio10();
+                    Ejercicio10.ejecutar(scanner);
                     break;
                 case 11:
-                    ejercicio11();
+                    Ejercicio11.ejecutar(scanner);
                     break;
                 case 12:
-                    ejercicio12();
+                    Ejercicio12.ejecutar(scanner);
                     break;
                 case 13:
-                    ejercicio13();
+                    Ejercicio13.ejecutar(scanner);
                     break;
                 case 14:
-                    ejercicio14();
+                    Ejercicio14.ejecutar(scanner);
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
@@ -69,75 +76,5 @@ public class Principal {
         } while (opcion != 0);
 
         scanner.close();
-    }
-
-    public static void ejercicio1() {
-        System.out.println("Ejecutando el Ejercicio 1...");
-        // Lógica del Ejercicio 1
-    }
-
-    public static void ejercicio2() {
-        System.out.println("Ejecutando el Ejercicio 2...");
-        // Lógica del Ejercicio 2
-    }
-
-    public static void ejercicio3() {
-        System.out.println("Ejecutando el Ejercicio 3...");
-        // Lógica del Ejercicio 3
-    }
-
-    public static void ejercicio4() {
-        System.out.println("Ejecutando el Ejercicio 4...");
-        // Lógica del Ejercicio 4
-    }
-
-    public static void ejercicio5() {
-        System.out.println("Ejecutando el Ejercicio 5...");
-        // Lógica del Ejercicio 5
-    }
-
-    public static void ejercicio6() {
-        System.out.println("Ejecutando el Ejercicio 6...");
-        // Lógica del Ejercicio 6
-    }
-
-    public static void ejercicio7() {
-        System.out.println("Ejecutando el Ejercicio 7...");
-        // Lógica del Ejercicio 7
-    }
-
-    public static void ejercicio8() {
-        System.out.println("Ejecutando el Ejercicio 8...");
-        // Lógica del Ejercicio 8
-    }
-
-    public static void ejercicio9() {
-        System.out.println("Ejecutando el Ejercicio 9...");
-        // Lógica del Ejercicio 9
-    }
-
-    public static void ejercicio10() {
-        System.out.println("Ejecutando el Ejercicio 10...");
-        // Lógica del Ejercicio 10
-    }
-
-    public static void ejercicio11() {
-        System.out.println("Ejecutando el Ejercicio 11...");
-        // Lógica del Ejercicio 11
-    }
-
-    public static void ejercicio12() {
-        System.out.println("Ejecutando el Ejercicio 12...");
-        // Lógica del Ejercicio 12
-    }
-
-    public static void ejercicio13() {
-        System.out.println("Ejecutando el Ejercicio 13...");
-        // Lógica del Ejercicio 13
-    }
-
-    public static void ejercicio14() {
-        System.out.println("Ejecutando el Ejercicio 14...");
-        // Lógica del Ejercicio 14
     }
 }

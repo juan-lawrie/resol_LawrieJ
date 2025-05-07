@@ -1,9 +1,11 @@
 package resol_LawrieJ;
+
 import java.util.Scanner;
+
 public class Ejercicio10 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         System.out.print("Ingrese una contraseña para validar: ");
+        scanner.nextLine(); // Consumir el salto de línea pendiente
         String contrasena = scanner.nextLine();
         boolean esSegura = validarContrasena(contrasena);
         if (esSegura) {
@@ -11,7 +13,6 @@ public class Ejercicio10 {
         } else {
             System.out.println("La contraseña no es segura.");
         }
-        scanner.close(); // Close the scanner to prevent resource leaks
     }
 
     public static boolean validarContrasena(String contrasena) {
@@ -33,7 +34,6 @@ public class Ejercicio10 {
             } else if (!Character.isLetterOrDigit(c)) {
                 tieneCaracterEspecial = true;
             }
-        
         }
 
         return tieneMayuscula && tieneMinuscula && tieneNumero && tieneCaracterEspecial;

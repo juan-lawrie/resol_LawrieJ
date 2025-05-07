@@ -3,8 +3,7 @@ package resol_LawrieJ;
 import java.util.Scanner;
 
 public class Ejercicio7 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         int opcion;
         do {
             System.out.println("\n--- MENÚ ---");
@@ -12,21 +11,25 @@ public class Ejercicio7 {
             System.out.println("2. Restar");
             System.out.println("3. Salir");
             System.out.print("Seleccione una opción: ");
-            opcion = sc.nextInt();
+            while (!scanner.hasNextInt()) {
+                System.out.println("Por favor, ingrese un número válido.");
+                scanner.next(); // Limpiar entrada inválida
+            }
+            opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
                     System.out.print("Ingrese el primer número: ");
-                    int a = sc.nextInt();
+                    int a = scanner.nextInt();
                     System.out.print("Ingrese el segundo número: ");
-                    int b = sc.nextInt();
+                    int b = scanner.nextInt();
                     System.out.println("Resultado: " + (a + b));
                     break;
                 case 2:
                     System.out.print("Ingrese el primer número: ");
-                    int x = sc.nextInt();
+                    int x = scanner.nextInt();
                     System.out.print("Ingrese el segundo número: ");
-                    int y = sc.nextInt();
+                    int y = scanner.nextInt();
                     System.out.println("Resultado: " + (x - y));
                     break;
                 case 3:
@@ -36,7 +39,5 @@ public class Ejercicio7 {
                     System.out.println("Opción inválida.");
             }
         } while (opcion != 3);
-        sc.close();
     }
 }
-
